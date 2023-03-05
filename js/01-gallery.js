@@ -36,18 +36,13 @@ function handleGalleryItemClick(evt) {
      <img 
     src="${evt.target.dataset.source}"
   />
-  
 `);
   instance.show();
- 
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      instance.close();
+    }
+  });
+
 }
-
-// const instanceEl = document.querySelector('.modal__img')
-
-// instanceEl.addEventListener('keydown', handleEscapePress);
-
-// function handleEscapePress (evt) {
-//   console.log("key: ", evt.key);
-//   console.log("code: ", evt.code);
-// }
-

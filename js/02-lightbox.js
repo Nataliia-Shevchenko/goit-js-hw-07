@@ -1,4 +1,4 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 const galleryEl = document.querySelector(".gallery");
@@ -17,5 +17,7 @@ function createGalleryItemsMarkup(items) {
     .join("");
 }
 
-const gallery = new SimpleLightbox('.gallery a', {captions: true, captionSelector: 'img', docClose: false, captionsData: [galleryItems.description]});
-
+new SimpleLightbox(".gallery a", {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
